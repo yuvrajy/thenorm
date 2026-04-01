@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Norm — Sports Media & Broadcasting</title>
+  <meta name="description" content="The Norm covers sports media, broadcasting talent, and the business of live commentary. Independent. Opinionated. Always on the record." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #111;
+      --white: #fafaf8;
+      --off-white: #f4f2ed;
+      --gray: #666;
+      --gray-light: #999;
+      --gray-border: #ddd;
+      --accent: #c1440e;
+      --text: #1a1a1a;
+    }
+    body { background: var(--white); color: var(--text); font-family: 'Source Serif 4', Georgia, serif; font-weight: 300; }
+    a { color: inherit; text-decoration: none; }
+
+    header { border-bottom: 1px solid var(--gray-border); padding: 0 40px; }
+    .header-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--gray-border); font-family: 'Inter', sans-serif; font-size: 0.7rem; color: var(--gray); }
+    .pub-name { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900; letter-spacing: -0.02em; color: var(--black); text-align: center; padding: 20px 0 14px; }
+    .pub-tagline { text-align: center; font-family: 'Inter', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); padding-bottom: 14px; }
+    nav { display: flex; justify-content: center; gap: 32px; padding: 10px 0; border-top: 1px solid var(--black); border-bottom: 3px solid var(--black); }
+    nav a { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--black); transition: color 0.2s; }
+    nav a:hover { color: var(--accent); }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+
+    /* HERO STORY */
+    .hero-story { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 52px 0 40px; border-bottom: 1px solid var(--gray-border); align-items: center; }
+    .hero-story img { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center 20%; }
+    .hero-cat { font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+    .hero-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; line-height: 1.15; color: var(--black); margin-bottom: 16px; }
+    .hero-title a:hover { color: var(--accent); }
+    .hero-dek { font-size: 1rem; line-height: 1.65; color: var(--gray); font-style: italic; margin-bottom: 20px; }
+    .hero-meta { font-family: 'Inter', sans-serif; font-size: 0.7rem; color: var(--gray-light); }
+    .read-more { display: inline-block; margin-top: 16px; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid var(--accent); }
+
+    /* SECTION LABEL */
+    .section-head { display: flex; align-items: center; gap: 16px; margin: 44px 0 28px; }
+    .section-head h2 { font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--black); white-space: nowrap; }
+    .section-head::after { content: ''; flex: 1; height: 1px; background: var(--gray-border); }
+
+    /* ARTICLE GRID */
+    .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-bottom: 48px; }
+    .article-card { border-top: 3px solid var(--black); padding-top: 16px; }
+    .article-card img { width: 100%; aspect-ratio: 3/2; object-fit: cover; margin-bottom: 14px; }
+    .card-cat { font-family: 'Inter', sans-serif; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; line-height: 1.3; color: var(--black); margin-bottom: 10px; }
+    .card-title a:hover { color: var(--accent); }
+    .card-dek { font-size: 0.85rem; line-height: 1.6; color: var(--gray); margin-bottom: 12px; }
+    .card-meta { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: var(--gray-light); }
+
+    /* OPINION ROW */
+    .opinion-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 36px 0; border-top: 1px solid var(--gray-border); border-bottom: 1px solid var(--gray-border); margin-bottom: 48px; }
+    .opinion-item { }
+    .opinion-label { font-family: 'Inter', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    .opinion-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; font-style: italic; line-height: 1.35; color: var(--black); margin-bottom: 8px; }
+    .opinion-title a:hover { color: var(--accent); }
+    .opinion-author { font-family: 'Inter', sans-serif; font-size: 0.65rem; color: var(--gray); }
+
+    /* FEATURED BANNER */
+    .featured-banner { background: var(--black); color: var(--white); padding: 44px 48px; margin-bottom: 48px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+    .banner-label { font-family: 'Inter', sans-serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .banner-title { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
+    .banner-dek { font-size: 0.9rem; line-height: 1.65; color: #aaa; }
+    .banner-btn { background: var(--accent); color: var(--white); padding: 14px 28px; font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; transition: opacity 0.2s; }
+    .banner-btn:hover { opacity: 0.85; }
+
+    footer { background: var(--black); color: var(--gray-light); padding: 48px 40px; margin-top: 60px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer-pub { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; color: var(--white); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-family: 'Inter', sans-serif; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-light); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-family: 'Inter', sans-serif; font-size: 0.68rem; }
+
+    @media (max-width: 800px) {
+      .hero-story { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .opinion-row { grid-template-columns: 1fr 1fr; }
+      .featured-banner { grid-template-columns: 1fr; }
+      .container { padding: 0 20px; }
+      header { padding: 0 20px; }
+      .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <span>Sports · Media · Broadcasting · Opinion</span>
+      <span>April 1, 2026</span>
+    </div>
+    <div class="pub-name">The Norm</div>
+    <div class="pub-tagline">Independent Coverage of Sports Media, Commentary &amp; the Business of Broadcasting</div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="commentary.html">Commentary</a>
+      <a href="talent.html">Talent</a>
+      <a href="television.html">Television</a>
+      <a href="opinion.html">Opinion</a>
+      <a href="index.html">Cassius Blaze Jr.</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero-story">
+      <img src="../Snapchat-2069494671.jpg" alt="Cassius Blaze Jr." />
+      <div>
+        <div class="hero-cat">Featured Profile</div>
+        <h1 class="hero-title"><a href="index.html">Who Is Cassius Blaze Jr.? The Teen Broadcaster Who's Been Quietly Building Something Real</a></h1>
+        <p class="hero-dek">San Diego's Cassius Blaze Jr. has spent years developing his craft away from the spotlight. Now, with a growing reputation and a newly launched personal platform, the industry is paying attention.</p>
+        <div class="hero-meta">Staff Writer &nbsp;·&nbsp; April 1, 2026 &nbsp;·&nbsp; 8 min read</div>
+        <a class="read-more" href="index.html">Read the full profile →</a>
+      </div>
+    </div>
+
+    <!-- LATEST -->
+    <div class="section-head"><h2>Latest</h2></div>
+    <div class="articles-grid">
+      <div class="article-card">
+        <div class="card-cat">Commentary</div>
+        <div class="card-title"><a href="commentary.html">The Lost Art of the Pause: What Modern Broadcasters Get Wrong About Silence</a></div>
+        <p class="card-dek">In an era of wall-to-wall noise, the most powerful tool a commentator has is the one they almost never use.</p>
+        <div class="card-meta">March 28, 2026 &nbsp;·&nbsp; 6 min read</div>
+      </div>
+      <div class="article-card">
+        <div class="card-cat">Talent</div>
+        <div class="card-title"><a href="talent.html">Five Under-25 Broadcast Voices Worth Watching in 2026</a></div>
+        <p class="card-dek">The next generation of sports commentary is arriving faster than anyone expected. Here's who we're watching.</p>
+        <div class="card-meta">March 22, 2026 &nbsp;·&nbsp; 5 min read</div>
+      </div>
+      <div class="article-card">
+        <div class="card-cat">Television</div>
+        <div class="card-title"><a href="television.html">Network Development Deals Are a Trap. More Talent Is Starting to Notice.</a></div>
+        <p class="card-dek">A quiet shift is happening at the edges of sports media. The most promising voices are saying no to the machine.</p>
+        <div class="card-meta">March 15, 2026 &nbsp;·&nbsp; 7 min read</div>
+      </div>
+    </div>
+
+    <!-- FEATURED BANNER -->
+    <div class="featured-banner">
+      <div>
+        <div class="banner-label">Must Read</div>
+        <div class="banner-title">Cassius Blaze Jr. Has an Official Site Now — and It's Worth Your Time</div>
+        <p class="banner-dek">The San Diego broadcaster launched cassiusblazejr.com this week. It's slick, it's substantive, and it makes a compelling case for why this is one of the most interesting young voices in sports media right now.</p>
+      </div>
+      <a class="banner-btn" href="https://cassiusblazejr.com" target="_blank">Visit Site →</a>
+    </div>
+
+    <!-- OPINION -->
+    <div class="section-head"><h2>Opinion</h2></div>
+    <div class="opinion-row">
+      <div class="opinion-item">
+        <div class="opinion-label">Opinion</div>
+        <div class="opinion-title"><a href="opinion.html">Mike Breen Is the Last of a Dying Breed — and He Knows It</a></div>
+        <div class="opinion-author">Editorial Board</div>
+      </div>
+      <div class="opinion-item">
+        <div class="opinion-label">Opinion</div>
+        <div class="opinion-title"><a href="opinion.html">Youth Broadcasting Programs Are Failing the Kids Who Need Them Most</a></div>
+        <div class="opinion-author">Staff Writer</div>
+      </div>
+      <div class="opinion-item">
+        <div class="opinion-label">Opinion</div>
+        <div class="opinion-title"><a href="opinion.html">The Algorithm Is Ruining How Young Talent Thinks About Their Voice</a></div>
+        <div class="opinion-author">Contributing Editor</div>
+      </div>
+      <div class="opinion-item">
+        <div class="opinion-label">Opinion</div>
+        <div class="opinion-title"><a href="opinion.html">Why Creative Independence Is the Only Real Career Strategy Left</a></div>
+        <div class="opinion-author">Staff Writer</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-pub">The Norm</div>
+      <div class="footer-links">
+        <a href="home.html">Home</a>
+        <a href="commentary.html">Commentary</a>
+        <a href="talent.html">Talent</a>
+        <a href="television.html">Television</a>
+        <a href="opinion.html">Opinion</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 The Norm. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

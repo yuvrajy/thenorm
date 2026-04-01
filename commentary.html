@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Lost Art of the Pause — The Norm</title>
+  <meta name="description" content="In an era of wall-to-wall noise, the most powerful tool a commentator has is the one they almost never use. A deep dive into silence as craft." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --black: #111; --white: #fafaf8; --off-white: #f4f2ed; --gray: #666; --gray-light: #999; --gray-border: #ddd; --accent: #c1440e; --text: #1a1a1a; }
+    body { background: var(--white); color: var(--text); font-family: 'Source Serif 4', Georgia, serif; font-weight: 300; }
+    a { color: inherit; text-decoration: none; }
+    header { border-bottom: 1px solid var(--gray-border); padding: 0 40px; }
+    .header-top { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--gray-border); font-family: 'Inter', sans-serif; font-size: 0.7rem; color: var(--gray); }
+    .pub-name { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--black); text-align: center; padding: 16px 0 12px; }
+    nav { display: flex; justify-content: center; gap: 32px; padding: 10px 0; border-top: 1px solid var(--black); border-bottom: 3px solid var(--black); }
+    nav a { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--black); }
+    nav a:hover { color: var(--accent); }
+    .container { max-width: 780px; margin: 0 auto; padding: 60px 40px; }
+    .article-category { font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .article-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.12; color: var(--black); margin-bottom: 20px; }
+    .article-dek { font-size: 1.15rem; line-height: 1.6; color: var(--gray); font-style: italic; margin-bottom: 24px; border-left: 3px solid var(--accent); padding-left: 18px; }
+    .article-meta { display: flex; gap: 16px; padding: 16px 0; border-top: 1px solid var(--gray-border); border-bottom: 1px solid var(--gray-border); margin-bottom: 40px; font-family: 'Inter', sans-serif; font-size: 0.72rem; color: var(--gray); }
+    .meta-author { font-weight: 600; color: var(--black); }
+    .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--black); margin: 44px 0 16px; }
+    .article-body p { font-size: 1.05rem; line-height: 1.85; color: var(--text); margin-bottom: 22px; }
+    .article-body strong { font-weight: 600; }
+    .article-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    .pull-quote { border-top: 3px solid var(--black); border-bottom: 1px solid var(--gray-border); padding: 28px 0; margin: 40px 0; }
+    .pull-quote p { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-style: italic; line-height: 1.4; color: var(--black); margin: 0; }
+    .related { margin-top: 60px; padding-top: 24px; border-top: 3px solid var(--black); }
+    .related h3 { font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 20px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .related-item .r-cat { font-family: 'Inter', sans-serif; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .related-item .r-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; line-height: 1.3; color: var(--black); }
+    .related-item .r-title:hover { color: var(--accent); }
+    footer { background: var(--black); color: var(--gray-light); padding: 40px; margin-top: 60px; text-align: center; font-family: 'Inter', sans-serif; font-size: 0.7rem; }
+    .footer-pub { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 900; color: var(--white); margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top"><span>Commentary</span><span>March 28, 2026</span></div>
+    <div class="pub-name"><a href="home.html">The Norm</a></div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="commentary.html">Commentary</a>
+      <a href="talent.html">Talent</a>
+      <a href="television.html">Television</a>
+      <a href="opinion.html">Opinion</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="article-category">Commentary</div>
+    <h1 class="article-title">The Lost Art of the Pause: What Modern Broadcasters Get Wrong About Silence</h1>
+    <p class="article-dek">In an era of wall-to-wall noise, the most powerful tool a commentator has is the one they almost never use.</p>
+    <div class="article-meta">
+      <span class="meta-author">Staff Writer, The Norm</span>
+      <span>·</span><span>March 28, 2026</span>
+      <span>·</span><span>6 min read</span>
+    </div>
+
+    <div class="article-body">
+      <p>There is a moment in nearly every great sports call that goes unnoticed precisely because it works so well. It is not the call itself — not the scream, not the signature phrase, not the name delivered with operatic force. It is the beat before any of that. The held breath. The decision to say nothing.</p>
+
+      <p>Modern sports broadcasting has largely forgotten this tool exists.</p>
+
+      <p>Turn on any network game today and you will find commentary that treats silence as a problem to be solved. Every gap is filled. Every replay has narration. Every transition from one moment to the next is bridged with words that add nothing except the assurance that someone is still there, still watching, still being paid to speak.</p>
+
+      <h2>What the Great Ones Understood</h2>
+
+      <p>The broadcasters who defined their eras — <strong>Vin Scully, Dick Enberg, Mike Breen</strong> — understood something that the current generation has either forgotten or was never taught: the crowd is part of the broadcast. The ambient sound of sixty thousand people reacting to something extraordinary is itself a call. Your job is not to compete with it. Your job is to frame it, then get out of the way.</p>
+
+      <div class="pull-quote">
+        <p>"Commentary is not about filling silence. It is about deciding what deserves to be remembered."</p>
+      </div>
+
+      <p>That quote belongs to <strong><a href="https://cassiusblazejr.com" target="_blank">Cassius Blaze Jr.</a></strong>, a 17-year-old San Diego broadcaster who has been quietly developing his craft under Mike Breen's mentorship. It is, in a single sentence, a more sophisticated philosophy of live commentary than most working professionals could articulate. The fact that it comes from someone who hasn't yet graduated high school is either inspiring or embarrassing depending on where you sit.</p>
+
+      <h2>Why This Keeps Getting Worse</h2>
+
+      <p>The structural reasons for the death of the pause are not hard to identify. Network executives measure engagement in ways that penalize quiet. Social clips reward the memorable phrase, not the architecture of tension that made it land. Analysts are hired for hot takes, not for the discipline to withhold one.</p>
+
+      <p>The result is a broadcast culture that has confused activity with quality. A commentator who speaks less but says more is, by most network metrics, underperforming. This is a problem that compounds over generations: young broadcasters model themselves on what they see, and what they see is noise.</p>
+
+      <h2>What Needs to Change</h2>
+
+      <p>The fix is not complicated, but it requires something networks are currently unwilling to value: restraint. It requires trusting the audience to feel a moment without being told what to feel. It requires broadcasters who understand that their greatest contribution is sometimes silence shaped into meaning.</p>
+
+      <p>Those broadcasters exist. They are, for now, mostly young, mostly independent, and mostly operating outside the structures that would eventually sand down exactly the instincts that make them worth listening to.</p>
+
+      <p>The hope is that some of them stay that way long enough to matter.</p>
+    </div>
+
+    <div class="related">
+      <h3>Related</h3>
+      <div class="related-grid">
+        <div class="related-item">
+          <div class="r-cat">Profile</div>
+          <a class="r-title" href="index.html">Who Is Cassius Blaze Jr.? The Teen Broadcaster Everyone's Talking About</a>
+        </div>
+        <div class="related-item">
+          <div class="r-cat">Talent</div>
+          <a class="r-title" href="talent.html">Five Under-25 Broadcast Voices Worth Watching in 2026</a>
+        </div>
+        <div class="related-item">
+          <div class="r-cat">Television</div>
+          <a class="r-title" href="television.html">Network Development Deals Are a Trap</a>
+        </div>
+        <div class="related-item">
+          <div class="r-cat">Opinion</div>
+          <a class="r-title" href="opinion.html">Mike Breen Is the Last of a Dying Breed</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-pub">The Norm</div>
+    <p>&copy; 2026 The Norm. Independent sports media coverage.</p>
+  </footer>
+</body>
+</html>
